@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shakthi K</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Gallery</h1>
+        <p class="back"><a href="index.html">← Back to Portfolio</a></p>
+    </header>
+
+    <section id="gallery-section">
+        <h2>My Works</h2>
+        <div class="gallery">
+            <img src="img1.jpg" alt="Artwork 1" onclick="openImage(this)">
+            <img src="img2.jpg" alt="Artwork 2" onclick="openImage(this)">
+            <img src="img3.jpg" alt="Artwork 3" onclick="openImage(this)">
+            <img src="img4.jpg" alt="Artwork 4" onclick="openImage(this)">
+            <img src="img5.jpg" alt="Artwork 5" onclick="openImage(this)">
+            <img src="img6.jpg" alt="Artwork 6" onclick="openImage(this)">
+            <img src="img7.jpg" alt="Artwork 7" onclick="openImage(this)">
+            <img src="img8.jpg" alt="Artwork 8" onclick="openImage(this)">
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img class="lightbox-content" id="fullImage">
+    </div>
+
+    <footer>
+        <p>© 2025 - Shakthi</p>
+    </footer>
+
+    <script>
+        function openImage(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("fullImage").src = img.src;
+        }
+
+        function closeImage() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+</body>
+</html>

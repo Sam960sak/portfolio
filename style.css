@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Header Section */
+header {
+    background-image: linear-gradient(45deg, #009dff, #17ffec);
+    color: white;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image round */
+    display: block;
+    margin: 10px auto;
+    border: 3px solid white;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    background: white;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 8px #17ffec;
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+}
+
+/* Skills List */
+#skills ul {
+    padding: 0;
+}
+
+#skills ul li {
+    list-style-type: none;
+    padding: 5px;
+    background-image: linear-gradient(45deg, #009dff, #17ffec);
+    color: white;
+    margin: 5px auto;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Links Styling */
+a {
+    background: linear-gradient(45deg, #009dff, #17ffec);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    background: linear-gradient(45deg, #17ffec, #009dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Footer */
+footer {
+    background-image: linear-gradient(45deg, #009dff, #17ffec);
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Contact & Projects */
+.gym1 a {
+    color: #009dff;
+}
+
+.gym1 a:hover {
+    background: linear-gradient(45deg, #17ffec, #009dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox (Full-Screen Image View) */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Back Button */
+.back a {
+    background: linear-gradient(45deg, #ff00aa, #09ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.back a:hover {
+    background: linear-gradient(45deg, #09ff00, #ff00aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    .photo {
+        width: 120px; /* Reduce size for better fit */
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    section {
+        width: 95%; /* Increase section width */
+        padding: 15px;
+    }
+
+    #skills ul li {
+        display: block; /* Ensure skills stack properly */
+        width: auto;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .gym1 {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Make the gallery images fit better */
+    .gallery img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+
+    /* Lightbox image should be smaller on mobile */
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 80%;
+    }
+}
